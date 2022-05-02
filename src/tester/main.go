@@ -14,11 +14,11 @@ func Handler(ctx context.Context, req events.APIGatewayProxyRequest) (events.API
 		Body:       "hi",
 		// this header shows up in debugging/devtools
 		Headers: map[string]string{
-			"X-Foo": "1",
+			"X-Single": "A",
 		},
 		// this doesn't seem to work
 		MultiValueHeaders: map[string][]string{
-			"X-Bar": {"2"},
+			"X-Multi": {"B", "C"},
 		},
 	}, nil
 }
